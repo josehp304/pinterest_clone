@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>login page</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="login-container">
+      <img src="/images/pinterest-logo.png" alt="Pinterest" class="logo">
+      <h2>Welcome to Pinterest</h2>
+      <p class="subtitle">Find new ideas to try</p>
+      
+      <form class="login-form" action="/login" method="POST">
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Email" required>
+        </div>
+        
+        <div class="form-group">
+          <input type="password" name="password" placeholder="Password" required>
+        </div>
+        
+        <div class="form-group">
+          <button type="submit" class="login-btn">Log in</button>
+        </div>
+        
+        <div class="divider">OR</div>
+        
+        <div class="form-group">
+          <button type="button" class="facebook-btn">Continue with Facebook</button>
+        </div>
+        
+        <div class="form-group">
+          <button type="button" class="google-btn">Continue with Google</button>
+        </div>
+      </form>
+      
+      <p class="terms">By continuing, you agree to Pinterest's <a href="#">Terms of Service</a> and acknowledge you've read our <a href="#">Privacy Policy</a></p>
+      
+      <div class="signup-link">
+        <p>Not on Pinterest yet? <a href="/signup">Sign up</a></p>
+      </div>
+    </div>
+
+
+  </body>
+</html>
