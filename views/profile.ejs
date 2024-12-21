@@ -60,7 +60,7 @@
     </div>
     <div class="uploadContainer">
         <form action="/upload" method="POST" enctype="multipart/form-data"  >
-            <input type="text" placeholder="Enter caption" name="caption">
+            <input type="text" placeholder="Enter caption" name="filecaption">
             <input type="file" name="file">
             <button style="background-color: red; width: fit-content; color:white; border:0; border-radius:20px;" type ="submit" >Create new post</button>
         </form>
@@ -70,13 +70,16 @@
     <div class="container-fluid">
         <h3 class="text-center my-4">Your Pins</h3>
         <div class="row row-cols-1 row-cols-md-4 g-4">
-            <div class="col">
-                <div class="card">
-                    
-                    <img src="/images/h_1.jpg" class="card-img-top" alt="pin">
-                    <p class="caption">Lorem ipsum dolor sit amet.</p>
-                </div>
-            </div>
+            <%user.posts.forEach(function(post){ %>
+                <div class="col">
+                    <div class="card">
+                        
+                        <img src="/uploads/<%=post.postImage%>" class="card-img-top" alt="pin">
+                        <p class="caption" style="margin:20px"><%= post.postText %></p>
+                    </div>
+                </div>    
+            <% }) %>
+            
             <!-- <div class="col">
                 <div class="card">
                     <img src="/images/h_2.jpg" class="card-img-top" alt="pin">

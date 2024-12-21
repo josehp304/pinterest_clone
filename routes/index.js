@@ -15,8 +15,9 @@ router.get('/', function(req, res, next) {
 router.get('/signup',(req,res)=>{
   res.render('signup')
 })
-router.get('/home',isLoggedIn,function(req,res,next){
-  res.render('home')
+router.get('/home',isLoggedIn,async function(req,res,next){
+  allPost = await postModel.find()
+  res.render('home',{allPost:allPost})
 })
 router.get('/profile',isLoggedIn, async function(req,res,next){
   user = await userModel.findOne({username:req.session.passport.user}).populate("posts")

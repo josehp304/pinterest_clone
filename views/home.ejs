@@ -42,24 +42,22 @@
     <div class="container-fluid">
         <div class="masonry-grid">
             <!-- Sample pins - in a real app these would be dynamically generated -->
-            <div class="card">
-                <img src="/images/h_1.jpg" class="card-img-top" alt="pin">
-            </div>
-            <div class="card">
-                <img src="/images/h_2.jpg" class="card-img-top" alt="pin">
-            </div>
-            <div class="card">
-                <img src="/images/h_3.jpg" class="card-img-top" alt="pin">
-            </div>
-            <div class="card">
-                <img src="/images/h_4.jpg" class="card-img-top" alt="pin">
-            </div>
-            <div class="card">
-                <img src="/images/h_5.jpg" class="card-img-top" alt="pin">
-            </div>
-            <div class="card">
-                <img src="/images/h_6.jpg" class="card-img-top" alt="pin">
-            </div>
+            <%allPost.forEach((post)=>{ %>
+                <div class="card">
+                    <img src="/uploads/<%=post.postImage%>" class="card-img-top" alt="pin">
+                </div>
+            <% }) %>
+            <%allPost.forEach((post)=>{ %>
+                <div class="card">
+                    <img src="/uploads/<%=post.postImage%>" class="card-img-top" alt="pin">
+                </div>
+            <% }) %>
+            <%allPost.forEach((post)=>{ %>
+                <div class="card">
+                    <img src="/uploads/<%=post.postImage%>" class="card-img-top" alt="pin">
+                </div>
+            <% }) %>
+            
         </div>
 
     </div>
